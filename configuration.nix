@@ -104,12 +104,16 @@
   # VirtualBox.
   virtualisation.virtualbox.host.enable = true;
 
+  # v2rayA.
+  services.v2raya.enable = true;
+
   # ZSH.
   programs.zsh = {
     enable = true;
     enableCompletion = true;
     promptInit = ''
       source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
+      source ${pkgs.zsh-history-substring-search}/share/zsh-history-substring-search/zsh-history-substring-search.zsh
       autoload -Uz compinit
       compinit
       zstyle ':completion:*' menu select
@@ -158,6 +162,7 @@
     file
     bat
     zsh-powerlevel10k
+    zsh-history-substring-search
     powershell
   ];
 
