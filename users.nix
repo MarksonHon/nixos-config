@@ -25,10 +25,6 @@
           enable = true;
           styles = { "alias" = "fg=magenta,bold"; };
         };
-        autosuggestions = {
-          enable = true;
-          highlightStyle = "fg=cyan";
-        };
       };
       home.stateVersion = "24.05";
 
