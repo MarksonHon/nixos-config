@@ -23,7 +23,6 @@
         promptInit = "promptinit";
         theme = "agnoster";
       };
-    }
-
-    { home.stateVersion = "24.05"; };
+      home.stateVersion = "24.05";
+    };
 }
