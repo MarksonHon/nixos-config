@@ -1,6 +1,7 @@
 { config, pkgs, ... }:
 
 {
+  home-manager.useUserPackages = true;
   users.users.markson = {
     isNormalUser = true;
     description = "Markson Hon";
@@ -10,6 +11,7 @@
   home-manager.users.markson = { pkgs, ... }:
 
     {
+
       programs.git = {
         enable = true;
         userName = "Markson Hon";
@@ -22,12 +24,13 @@
           enable = true;
           styles = { "alias" = "fg=magenta,bold"; };
         };
-        autosuggestions = {
-            enable = true;
-            highlightStyle = "fg=cyan";
-        };
+        # autosuggestions = {
+        #   enable = true;
+        #   highlightStyle = "fg=cyan";
+        # };
       };
       home.stateVersion = "24.05";
+
     };
 
 }
