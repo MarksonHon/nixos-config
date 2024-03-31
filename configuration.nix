@@ -113,6 +113,9 @@
       autoload -Uz compinit
       compinit
       zstyle ':completion:*' menu select
+      autoload -Uz up-line-or-beginning-search down-line-or-beginning-search
+      zle -N up-line-or-beginning-search
+      zle -N down-line-or-beginning-search
     '';
     syntaxHighlighting = {
       enable = true;
@@ -124,7 +127,10 @@
     };
   };
 
-  # Allow unfree packages
+  # Home Manager.
+  programs.home-manager.enable = true;
+  
+  # Allow unfree packages.
   nixpkgs.config.allowUnfree = true;
 
   # List packages installed in system profile. To search, run:
