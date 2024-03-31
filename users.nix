@@ -20,14 +20,15 @@
       programs.zsh = {
         enable = true;
         enableCompletion = true;
+        promptInit = "source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
         syntaxHighlighting = {
           enable = true;
           styles = { "alias" = "fg=magenta,bold"; };
         };
-        # autosuggestions = {
-        #   enable = true;
-        #   highlightStyle = "fg=cyan";
-        # };
+        autosuggestions = {
+          enable = true;
+          highlightStyle = "fg=cyan";
+        };
       };
       home.stateVersion = "24.05";
 
