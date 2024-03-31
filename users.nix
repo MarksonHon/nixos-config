@@ -24,7 +24,7 @@
         };
         autosuggestions = {
             enable = true;
-            style = "fg=cyan";
+            highlightStyle = "fg=cyan";
         };
       };
       home.stateVersion = "24.05";
