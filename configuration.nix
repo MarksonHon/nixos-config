@@ -104,6 +104,18 @@
   # VirtualBox.
   virtualisation.virtualbox.host.enable = true;
 
+  # ZSH.
+  programs.zsh = {
+    enable = true;
+    enableCompletion = true;
+    promptInit =
+      "source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
+    syntaxHighlighting = {
+      enable = true;
+      styles = { "alias" = "fg=magenta,bold"; };
+    };
+  };
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
@@ -134,6 +146,7 @@
     bind
     file
     bat
+    zsh-powerlevel10k
     powershell
   ];
 
