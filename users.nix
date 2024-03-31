@@ -24,8 +24,8 @@
         enable = true;
         packages = with pkgs; [ zsh-syntax-highlighting ];
         highlighters = [ "main" "brackets" "pattern" ];
+      };
     };
     home.stateVersion = "24.05";
   };
-
 }
