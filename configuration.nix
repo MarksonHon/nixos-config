@@ -126,9 +126,6 @@
       strategy = [ "history" ];
     };
   };
-
-  # Home Manager.
-  programs.home-manager.enable = true;
   
   # Allow unfree packages.
   nixpkgs.config.allowUnfree = true;
