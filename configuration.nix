@@ -111,16 +111,6 @@
   programs.zsh = {
     enable = true;
     enableCompletion = true;
-    promptInit = ''
-      source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
-      source ${pkgs.zsh-history-substring-search}/share/zsh-history-substring-search/zsh-history-substring-search.zsh
-      autoload -Uz compinit
-      compinit
-      zstyle ':completion:*' menu select
-      autoload -Uz up-line-or-beginning-search down-line-or-beginning-search
-      zle -N up-line-or-beginning-search
-      zle -N down-line-or-beginning-search
-    '';
     syntaxHighlighting = {
       enable = true;
       styles = { "alias" = "fg=magenta,bold"; };
