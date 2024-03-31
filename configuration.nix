@@ -5,6 +5,7 @@
     ./hardware-configuration.nix # Include the results of the hardware scan.
     ./flatpak-hook.nix # Include the flatpak hook.
     ./fonts.nix # Include the fonts configuration.
+    ./users.nix # Include the users configuration.
     <home-manager/nixos>
   ];
 
@@ -45,7 +46,7 @@
     LC_TIME = "zh_CN.UTF-8";
   };
 
-  # Desktop.
+  # GNOME Desktop.
   services = {
     xserver = {
       enable = true;
@@ -99,15 +100,6 @@
     fcitx5.addons = with pkgs; [ fcitx5-chinese-addons fcitx5-configtool ];
     fcitx5.waylandFrontend = true;
   };
-
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.markson = {
-    isNormalUser = true;
-    description = "Markson Hon";
-    extraGroups = [ "networkmanager" "wheel" "vboxusers" ];
-    packages = with pkgs; [ chromium ];
-  };
-  home-manager.users.markson = { pkgs, ... }: { home.stateVersion = "24.05"; };
 
   # VirtualBox.
   virtualisation.virtualbox.host.enable = true;
