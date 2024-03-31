@@ -18,11 +18,16 @@
       programs.zsh = {
         enable = true;
         enableCompletion = true;
-        enableAutosuggestions = true;
-        enableSyntaxHighlighting = true;
-        promptInit = "promptinit";
-        theme = "agnoster";
+        syntaxHighlighting = {
+          enable = true;
+          styles = { "alias" = "fg=magenta,bold"; };
+        };
+        autosuggestions = {
+            enable = true;
+            style = "fg=cyan";
+        };
       };
       home.stateVersion = "24.05";
     };
+
 }
