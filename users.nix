@@ -16,10 +16,6 @@
     };
     programs.zsh = {
       enable = true;
-      ohMyZshModule = {
-        enable = true;
-        plugins = [ "git" "sudo" "command-not-found" ];
-      };
       syntaxHighlightingModule = {
         enable = true;
         packages = with pkgs; [ zsh-syntax-highlighting ];
