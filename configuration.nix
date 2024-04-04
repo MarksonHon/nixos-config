@@ -122,6 +122,10 @@
     promptInit = ''
       source {$pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh
     '';
+    interactiveShellInit = ''
+      source {$pkgs.zsh-history-substring-search}/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+      source {$pkgs.zsh-autosuggestions}/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+    '';
   };
 
   # Allow unfree packages.
@@ -155,6 +159,7 @@
     file
     bat
     zsh-powerlevel10k
+    zsh-autosuggestions
     zsh-history-substring-search
     powershell
   ];

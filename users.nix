@@ -17,7 +17,6 @@
     programs.zsh = {
       enable = true;
       autocd = true;
-      historySubstringSearch.enable = true;
       completionInit = ''
         autoload -Uz compinit
         compinit
