@@ -120,9 +120,9 @@
       strategy = [ "history" ];
     };
     promptInit = ''
+      export POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
       source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
       [ -f ~/.p10k.zsh ] && source ~/.p10k.zsh || [ ! -f ~/.p10k.zsh ] && p10k configure
-      export POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
     '';
     interactiveShellInit = ''
       source ${pkgs.zsh-history-substring-search}/share/zsh-history-substring-search/zsh-history-substring-search.zsh
