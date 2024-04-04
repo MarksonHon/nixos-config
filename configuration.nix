@@ -119,8 +119,11 @@
       enable = true;
       strategy = [ "history" ];
     };
+    promptInit = ''
+      source {$pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh
+    '';
   };
-  
+
   # Allow unfree packages.
   nixpkgs.config.allowUnfree = true;
 
