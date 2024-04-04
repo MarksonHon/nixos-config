@@ -111,26 +111,19 @@
   programs.zsh = {
     enable = true;
     enableCompletion = true;
-    syntaxHighlighting = {
-      enable = true;
-      styles = { "alias" = "fg=magenta,bold"; };
-    };
     autosuggestions = {
       enable = true;
       strategy = [ "history" ];
     };
     promptInit = ''
       POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
+      source ${pkgs.zsh-fast-syntax-highlighting}/share/zsh/site-functions/fast-syntax-highlighting.plugin.zsh
       source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
       if [ -f ~/.p10k.zsh ]; then
         source ~/.p10k.zsh
       else
         p10k configure
       fi
-    '';
-    interactiveShellInit = ''
-      source ${pkgs.zsh-history-substring-search}/share/zsh-history-substring-search/zsh-history-substring-search.zsh
-      source ${pkgs.zsh-autosuggestions}/share/zsh-autosuggestions/zsh-autosuggestions.zsh
     '';
   };
 
@@ -166,7 +159,7 @@
     bat
     zsh-powerlevel10k
     zsh-autosuggestions
-    zsh-history-substring-search
+    zsh-fast-syntax-highlighting
     powershell
   ];
 
