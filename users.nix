@@ -14,14 +14,16 @@
       userName = "Markson Hon";
       userEmail = "markson@nixos.local";
     };
-    # programs.zsh = {
-    #   enable = true;
-    #   syntaxHighlightingModule = {
-    #     enable = true;
-    #     packages = with pkgs; [ zsh-syntax-highlighting ];
-    #     highlighters = [ "main" "brackets" "pattern" ];
-    #   };
-    # };
+    programs.zsh = {
+      enable = true;
+      autocd = true;
+      historySubstringSearch.enable = true;
+      completionInit = ''
+        autoload -Uz compinit
+        compinit
+        zstyle ':completion:*' menu select
+      '';
+    };
     home.stateVersion = "24.05";
   };
 }
