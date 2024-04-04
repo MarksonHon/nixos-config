@@ -15,7 +15,7 @@
       lxgw-neoxihei
       jetbrains-mono
       nerdfonts
-      fonts-harmonyos-sans
+      (callPackage ./packages/fonts-harmonyos-sans/default.nix { })
     ];
     fontconfig = {
       localConf = ''

@@ -1,4 +1,4 @@
-{ fetchurl, stdenv, fetchFromGitHub, fontconfig, unzip,  }:
+{ fetchurl, stdenv, fetchFromGitHub, fontconfig, unzip, ... }:
 
 stdenv.mkDerivation rec {
   name = "fonts-harmonyos-sans";

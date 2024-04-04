@@ -6,7 +6,6 @@
     ./flatpak-hook.nix # Include the flatpak hook.
     ./fonts.nix # Include the fonts configuration.
     ./users.nix # Include the users configuration.
-    ./packages/fonts-harmonyos-sans
     <home-manager/nixos>
   ];
 
