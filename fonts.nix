@@ -15,6 +15,7 @@
       lxgw-neoxihei
       jetbrains-mono
       nerdfonts
+      fonts-harmonyos-sans
     ];
     fontconfig = {
       localConf = ''
@@ -168,7 +169,7 @@
                 </test>
                 <edit name="family" mode="append" binding="strong">
                     <string>Noto Sans</string>
-                    <string>Source Han Sans SC</string>
+                    <string>HarmonyOS Sans SC</string>
                 </edit>
             </match>
 
@@ -210,7 +211,7 @@
                     <string>sans-serif</string>
                 </test>
                 <edit name="family" mode="append" binding="strong">
-                    <string>Source Han Sans SC</string>
+                    <string>HarmonyOS Sans SC</string>
                 </edit>
             </match>
             <!-- "lang=zh-hans" or "lang=zh-hans-*" -->
@@ -222,7 +223,7 @@
                     <string>sans-serif</string>
                 </test>
                 <edit name="family" mode="append" binding="strong">
-                    <string>Source Han Sans SC</string>
+                    <string>HarmonyOS Sans SC</string>
                 </edit>
             </match>
             <!-- "lang=zh-hant" or "lang=zh-hant-*" -->
@@ -259,7 +260,7 @@
                     <string>sans-serif</string>
                 </test>
                 <edit name="family" mode="append" binding="strong">
-                    <string>Source Han Sans SC</string>
+                    <string>HarmonyOS Sans SC</string>
                 </edit>
             </match>
             <!-- "lang=zh-tw" or "lang=zh-tw-*" -->
@@ -297,7 +298,7 @@
                 </test>
                 <edit name="family" mode="append" binding="strong">
                     <string>Noto Sans Mono</string>
-                    <string>Source Han Sans SC</string>
+                    <string>HarmonyOS Sans SC</string>
                 </edit>
             </match>
 
@@ -342,7 +343,7 @@
                 </test>
                 <edit name="family" mode="append" binding="strong">
                     <string>Noto Sans Mono</string>
-                    <string>Source Han Sans SC</string>
+                    <string>HarmonyOS Sans SC</string>
                 </edit>
             </match>
             <!-- "lang=zh-hans" or "lang=zh-hans-*" -->
@@ -355,7 +356,7 @@
                 </test>
                 <edit name="family" mode="append" binding="strong">
                     <string>Noto Sans Mono</string>
-                    <string>Source Han Sans SC</string>
+                    <string>HarmonyOS Sans SC</string>
                 </edit>
             </match>
             <!-- "lang=zh-hant" or "lang=zh-hant-*" -->
@@ -395,7 +396,7 @@
                 </test>
                 <edit name="family" mode="append" binding="strong">
                     <string>Noto Sans Mono</string>
-                    <string>Source Han Sans SC</string>
+                    <string>HarmonyOS Sans SC</string>
                 </edit>
             </match>
             <!-- "lang=zh-tw" or "lang=zh-tw-*" -->
@@ -435,7 +436,7 @@
                 </test>
                 <edit name="family" mode="append" binding="strong">
                     <string>Noto Sans</string>
-                    <string>Source Han Sans SC</string>
+                    <string>HarmonyOS Sans SC</string>
                 </edit>
             </match>
 
@@ -477,7 +478,7 @@
                     <string>system-ui</string>
                 </test>
                 <edit name="family" mode="append" binding="strong">
-                    <string>Source Han Sans SC</string>
+                    <string>HarmonyOS Sans SC</string>
                 </edit>
             </match>
             <!-- "lang=zh-hans" or "lang=zh-hans-*" -->
@@ -489,7 +490,7 @@
                     <string>system-ui</string>
                 </test>
                 <edit name="family" mode="append" binding="strong">
-                    <string>Source Han Sans SC</string>
+                    <string>HarmonyOS Sans SC</string>
                 </edit>
             </match>
             <!-- "lang=zh-hant" or "lang=zh-hant-*" -->
@@ -526,7 +527,7 @@
                     <string>system-ui</string>
                 </test>
                 <edit name="family" mode="append" binding="strong">
-                    <string>Source Han Sans SC</string>
+                    <string>HarmonyOS Sans SC</string>
                 </edit>
             </match>
             <!-- "lang=zh-tw" or "lang=zh-tw-*" -->

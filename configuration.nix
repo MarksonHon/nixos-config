@@ -6,6 +6,7 @@
     ./flatpak-hook.nix # Include the flatpak hook.
     ./fonts.nix # Include the fonts configuration.
     ./users.nix # Include the users configuration.
+    ./packages/fonts-harmonyos-sans
     <home-manager/nixos>
   ];
 
@@ -164,9 +165,12 @@
   ];
 
   # Environments.
-  environment.variables = {
-    QT_AUTO_SCREEN_SCALE_FACTOR = "1";
-    QT_IM_MODULE = "fcitx";
+  environment = {
+    variables = {
+      QT_AUTO_SCREEN_SCALE_FACTOR = "1";
+      QT_IM_MODULE = "fcitx";
+    };
+    sessionVariables = { NIXOS_OZONE_WL = "1"; };
   };
 
   # This value determines the NixOS release from which the default
