@@ -122,7 +122,11 @@
     promptInit = ''
       POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
       source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
-      [ -f ~/.p10k.zsh ] && source ~/.p10k.zsh || [ ! -f ~/.p10k.zsh ] && p10k configure
+      if [ -f ~/.p10k.zsh ]; then
+        source ~/.p10k.zsh
+      else
+        p10k configure
+      fi
     '';
     interactiveShellInit = ''
       source ${pkgs.zsh-history-substring-search}/share/zsh-history-substring-search/zsh-history-substring-search.zsh
