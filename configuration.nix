@@ -47,19 +47,25 @@
   };
 
   # GNOME Desktop.
-  services = {
-    xserver = {
-      enable = true;
-      displayManager.gdm.enable = true;
-      desktopManager.gnome.enable = true;
-    };
-    gnome.gnome-settings-daemon.enable = true;
-  };
+  # services = {
+  #   xserver = {
+  #     enable = true;
+  #     displayManager.gdm.enable = true;
+  #     desktopManager.gnome.enable = true;
+  #   };
+  #   gnome.gnome-settings-daemon.enable = true;
+  # };
+
+  # KDE Plasma Desktop.
+  services.desktopManager.plasma6.enable = true;
+  services.xserver.displayManager.sddm.enable = true;
+  services.xserver.displayManager.sddm.wayland.enable = true;
+  services.xserver.displayManager.sddm.wayland.compositor = "kwin";
 
   # Enable DConf and GNOME terminal.
   programs = {
     dconf.enable = true;
-    gnome-terminal.enable = true;
+    # gnome-terminal.enable = true;
   };
 
   # Configure keymap in X11
@@ -117,7 +123,7 @@
     };
     promptInit = ''
       POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
-      source ${pkgs.zsh-fast-syntax-highlighting}/share/zsh/site-functions/fast-syntax-highlighting.plugin.zsh
+      source ${pkgs.zsh-syntax-highlighting}/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
       source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
       if [ -f ~/.p10k.zsh ]; then
         source ~/.p10k.zsh
@@ -159,7 +165,7 @@
     bat
     zsh-powerlevel10k
     zsh-autosuggestions
-    zsh-fast-syntax-highlighting
+    zsh-syntax-highlighting
     powershell
   ];
 
@@ -167,7 +173,7 @@
   environment = {
     variables = {
       QT_AUTO_SCREEN_SCALE_FACTOR = "1";
-      QT_IM_MODULE = "fcitx";
+      # QT_IM_MODULE = "fcitx";
     };
     sessionVariables = { NIXOS_OZONE_WL = "1"; };
   };
