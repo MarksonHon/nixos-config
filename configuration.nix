@@ -15,7 +15,7 @@
       systemd-boot.enable = true;
       efi.canTouchEfiVariables = true;
     };
-    initrd.kernelModules = [ "amdgpu" ];
+    initrd.kernelModules = [ "amdgpu" "i2c-dev" ];
     kernelPackages = pkgs.linuxPackages_zen;
     # kernelParams = [ "" ];
     extraModprobeConfig = ''
