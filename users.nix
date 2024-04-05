@@ -5,7 +5,7 @@
   users.users.markson = {
     isNormalUser = true;
     description = "Markson Hon";
-    extraGroups = [ "networkmanager" "wheel" "vboxusers" ];
+    extraGroups = [ "networkmanager" "wheel" "vboxusers" "i2c" ];
   };
   home-manager.users.markson = { pkgs, ... }: {
     programs = {
