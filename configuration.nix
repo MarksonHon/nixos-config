@@ -54,7 +54,7 @@
       #     displayManager.gdm.enable = true;
       #     desktopManager.gnome.enable = true;
     };
-    #   gnome.gnome-settings-daemon.enable = true;
+      gnome.gnome-settings-daemon.enable = true;
   };
 
   # KDE Plasma Desktop.
@@ -154,7 +154,7 @@
     p7zip
     unzip
     unrar
-    gnome.gnome-tweaks
+    ddcutil
     mpv
     vscode
     git
