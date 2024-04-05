@@ -30,7 +30,10 @@
   };
 
   # Bluetooth.
-  hardware.bluetooth.enable = true;
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = true;
+  };
 
   # Set your time zone.
   time.timeZone = "Asia/Shanghai";
@@ -57,7 +60,7 @@
       #     displayManager.gdm.enable = true;
       #     desktopManager.gnome.enable = true;
     };
-      gnome.gnome-settings-daemon.enable = true;
+    gnome.gnome-settings-daemon.enable = true;
   };
 
   # KDE Plasma Desktop.
