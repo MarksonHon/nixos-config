@@ -47,14 +47,14 @@
   };
 
   # GNOME Desktop.
-  # services = {
-  #   xserver = {
-  #     enable = true;
-  #     displayManager.gdm.enable = true;
-  #     desktopManager.gnome.enable = true;
-  #   };
-  #   gnome.gnome-settings-daemon.enable = true;
-  # };
+  services = {
+    xserver = {
+      enable = true;
+      #     displayManager.gdm.enable = true;
+      #     desktopManager.gnome.enable = true;
+    };
+    #   gnome.gnome-settings-daemon.enable = true;
+  };
 
   # KDE Plasma Desktop.
   services.desktopManager.plasma6.enable = true;
