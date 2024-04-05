@@ -29,6 +29,9 @@
     networkmanager.enable = true;
   };
 
+  # Bluetooth.
+  hardware.bluetooth.enable = true;
+
   # Set your time zone.
   time.timeZone = "Asia/Shanghai";
 
