@@ -15,7 +15,8 @@
       systemd-boot.enable = true;
       efi.canTouchEfiVariables = true;
     };
-    kernelPackages = pkgs.linuxPackages_latest;
+    initrd.kernelModules = [ "amdgpu" ];
+    kernelPackages = pkgs.linuxPackages_zen;
     # kernelParams = [ "" ];
     extraModprobeConfig = ''
       options snd_hda_intel power_save=0
@@ -95,9 +96,7 @@
   xdg.portal = {
     enable = true;
     xdgOpenUsePortal = true;
-    #   extraPortals = [
-    #     pkgs.xdg-desktop-portal-gtk
-    #   ];
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
   };
 
   # Fcitx5.
@@ -175,7 +174,7 @@
       QT_AUTO_SCREEN_SCALE_FACTOR = "1";
       # QT_IM_MODULE = "fcitx";
     };
-    sessionVariables = { NIXOS_OZONE_WL = "1"; };
+    # sessionVariables = { NIXOS_OZONE_WL = "1"; };
   };
 
   # This value determines the NixOS release from which the default
