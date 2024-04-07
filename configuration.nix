@@ -172,6 +172,10 @@
     zsh-powerlevel10k
     zsh-autosuggestions
     zsh-syntax-highlighting
+    qgnomeplatform-qt6
+    qgnomeplatform-qt
+    adwaita-qt6
+    adwaita-qt
     powershell
   ];
 
@@ -180,7 +184,7 @@
     variables = {
       QT_AUTO_SCREEN_SCALE_FACTOR = "1";
       QT_IM_MODULE = "fcitx";
-      QT_QPA_PLATFORMTHEME = "Gnome";
+      QT_QPA_PLATFORMTHEME = "GNOME";
     };
     # sessionVariables = { NIXOS_OZONE_WL = "1"; };
   };
