@@ -57,22 +57,22 @@
   services = {
     xserver = {
       enable = true;
-      #     displayManager.gdm.enable = true;
-      #     desktopManager.gnome.enable = true;
+          displayManager.gdm.enable = true;
+          desktopManager.gnome.enable = true;
     };
     gnome.gnome-settings-daemon.enable = true;
   };
 
   # KDE Plasma Desktop.
-  services.desktopManager.plasma6.enable = true;
-  services.xserver.displayManager.sddm.enable = true;
-  services.xserver.displayManager.sddm.wayland.enable = true;
-  services.xserver.displayManager.sddm.wayland.compositor = "kwin";
+  # services.desktopManager.plasma6.enable = true;
+  # services.xserver.displayManager.sddm.enable = true;
+  # services.xserver.displayManager.sddm.wayland.enable = true;
+  # services.xserver.displayManager.sddm.wayland.compositor = "kwin";
 
   # Enable DConf and GNOME terminal.
   programs = {
     dconf.enable = true;
-    # gnome-terminal.enable = true;
+    gnome-terminal.enable = true;
   };
 
   # Configure keymap in X11
@@ -117,9 +117,6 @@
 
   # v2rayA.
   services.v2raya.enable = true;
-
-  # DDC Control
-  services.ddccontrol.enable = true;
 
   # ZSH.
   programs.zsh = {

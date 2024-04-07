@@ -21,9 +21,6 @@
           autoload -Uz compinit
           compinit
           zstyle ':completion:*' menu select
-          autoload -Uz up-line-or-beginning-search down-line-or-beginning-search
-          zle -N up-line-or-beginning-search 
-          zle -N down-line-or-beginning-search
         '';
       };
       chromium = {
