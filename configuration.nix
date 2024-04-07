@@ -173,7 +173,7 @@
     zsh-autosuggestions
     zsh-syntax-highlighting
     qgnomeplatform-qt6
-    qgnomeplatform-qt
+    qgnomeplatform
     adwaita-qt6
     adwaita-qt
     powershell
