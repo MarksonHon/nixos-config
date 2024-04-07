@@ -154,6 +154,7 @@
     gst_all_1.gst-plugins-good
     curl
     yaru-theme
+    gnome.gnome-tweaks
     intel-media-driver
     firefox
     fastfetch
