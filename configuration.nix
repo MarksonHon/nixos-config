@@ -118,6 +118,9 @@
   # v2rayA.
   services.v2raya.enable = true;
 
+  # DDC Control
+  services.ddccontrol.enable = true;
+
   # ZSH.
   programs.zsh = {
     enable = true;
