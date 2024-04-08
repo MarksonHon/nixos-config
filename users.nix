@@ -19,8 +19,8 @@
         initExtra = ''
           # Flatpak Fonts Hook
           for flatpak_app in ~/.var/app/*; do
-            [ -d "$flatpak_app/fontconfig" ] || mkdir -p "$flatpak_app/fontconfig"
-            cat /etc/fonts/local.conf > "$flatpak_app/fontconfig/fonts.conf"
+            [ -d "$flatpak_app/config/fontconfig" ] || mkdir -p "$flatpak_app/config/fontconfig"
+            cat /etc/fonts/local.conf > "$flatpak_app/config/fontconfig/fonts.conf"
           done
         '';
       };
