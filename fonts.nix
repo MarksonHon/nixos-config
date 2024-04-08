@@ -63,7 +63,6 @@
                     <string>serif</string>
                 </test>
                 <edit name="family" mode="append" binding="strong">
-                    <string>Noto Serif</string>
                     <string>Source Han Serif SC</string>
                 </edit>
             </match>
@@ -168,7 +167,6 @@
                     <string>sans-serif</string>
                 </test>
                 <edit name="family" mode="append" binding="strong">
-                    <string>Noto Sans</string>
                     <string>HarmonyOS Sans SC</string>
                 </edit>
             </match>
