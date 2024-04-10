@@ -17,6 +17,7 @@
       terminus-nerdfont
       maple-mono-NF
       (callPackage ./packages/fonts-harmonyos-sans/default.nix { })
+      (callPackage ./packages/fonts-lxgw-neoxihei/default.nix { })
     ];
     fontconfig = {
       localConf = ''
