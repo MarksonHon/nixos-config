@@ -14,8 +14,7 @@
       source-han-sans
       lxgw-neoxihei
       jetbrains-mono
-      terminus-nerdfont
-      maple-mono-NF
+      nerdfonts
       (callPackage ./packages/fonts-harmonyos-sans/default.nix { })
       (callPackage ./packages/fonts-lxgw-neoxihei/default.nix { })
     ];
