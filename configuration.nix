@@ -30,10 +30,10 @@
   };
 
   # Bluetooth.
-  hardware.bluetooth = {
-    enable = true;
-    powerOnBoot = true;
-  };
+  # hardware.bluetooth = {
+  #   enable = true;
+  #   powerOnBoot = true;
+  # };
 
   # Set your time zone.
   time.timeZone = "Asia/Shanghai";
@@ -141,7 +141,7 @@
   # Allow unfree packages.
   nixpkgs.config = {
     allowUnfree = true;
-    allowUnfreePredicate = (_: true);
+    allowUnfreePredicate = (pkg: true);
   };
 
   # List packages installed in system profile. To search, run:
