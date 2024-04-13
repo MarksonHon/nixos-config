@@ -162,8 +162,7 @@
     unzip
     unrar
     ddcutil
-    mpv
-    vscode
+    libva-utils
     git
     mission-center
     bind

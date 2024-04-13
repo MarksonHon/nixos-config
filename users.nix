@@ -14,6 +14,18 @@
         userName = "Markson Hon";
         userEmail = "markson@nixos.local";
       };
+      vscode = { enable = true; };
+      librewolf = { enable = true; };
+      mpv = {
+        enable = true;
+        scripts = [ pkgs.mpvScripts.uosc ];
+        config = {
+          enableHardwareDecoding = true;
+          hwdec = "auto-copy";
+          ytdl-format = "bestvideo[height<=?1080]+bestaudio/best";
+        };
+      };
+      yt-dlp = { enable = true; };
       bash = {
         enable = true;
         initExtra = ''
