@@ -1,7 +1,10 @@
 { config, pkgs, ... }:
 
 {
-  home-manager.useUserPackages = true;
+  home-manager = {
+    useUserPackages = true;
+    extraSpecialArgs = { inherit allowed-unfree-packages user; };
+  };
   users.users.markson = {
     isNormalUser = true;
     description = "Markson Hon";
