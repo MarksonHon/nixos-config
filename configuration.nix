@@ -171,6 +171,7 @@
     bind
     file
     bat
+    vscode
     zsh-powerlevel10k
     zsh-autosuggestions
     zsh-syntax-highlighting

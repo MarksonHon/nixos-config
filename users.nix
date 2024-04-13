@@ -3,7 +3,6 @@
 {
   home-manager = {
     useUserPackages = true;
-    extraSpecialArgs = { inherit allowed-unfree-packages user; };
   };
   users.users.markson = {
     isNormalUser = true;
@@ -17,7 +16,6 @@
         userName = "Markson Hon";
         userEmail = "markson@nixos.local";
       };
-      vscode = { enable = true; };
       librewolf = { enable = true; };
       mpv = {
         enable = true;
