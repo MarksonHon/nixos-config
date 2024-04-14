@@ -23,6 +23,12 @@
     '';
   };
 
+  # VAAPI.
+  hardware.opengl = {
+    enable = true;
+    extraPackages = with pkgs; [ intel-media-driver ];
+  };
+  
   # Networking.
   networking = {
     hostName = "nixos-on-asus"; # Define your hostname.
@@ -57,8 +63,8 @@
   services = {
     xserver = {
       enable = true;
-          displayManager.gdm.enable = true;
-          desktopManager.gnome.enable = true;
+      displayManager.gdm.enable = true;
+      desktopManager.gnome.enable = true;
     };
     gnome.gnome-settings-daemon.enable = true;
   };
