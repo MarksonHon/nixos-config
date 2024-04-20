@@ -21,7 +21,8 @@
         enable = true;
         scripts = [ pkgs.mpvScripts.uosc ];
         config = {
-          hwdec = "dmabuf-wayland";
+          vo = "dmabuf-wayland";
+          hwdec = "auto-safe";
         };
       };
       yt-dlp = { enable = true; };
