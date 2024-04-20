@@ -186,6 +186,7 @@
     adwaita-qt6
     adwaita-qt
     powershell
+    ventoy-full
   ];
 
   # Environments.
