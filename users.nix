@@ -21,9 +21,14 @@
         enable = true;
         scripts = [ pkgs.mpvScripts.uosc ];
         config = {
-          vo = "dmabuf-wayland";
+          vo = "gpu-next";
           hwdec = "auto-safe";
+          gpu-api = "vulkan";
+          gpu-context="waylandvk";
         };
+        bindings= {
+          "r" = "cycle_values video-rotate 90 180 270 0";
+        }
       };
       yt-dlp = { enable = true; };
       bash = {
