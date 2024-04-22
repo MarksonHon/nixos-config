@@ -28,7 +28,7 @@
     enable = true;
     extraPackages = with pkgs; [ intel-media-driver ];
   };
-  
+
   # Networking.
   networking = {
     hostName = "nixos-on-asus"; # Define your hostname.
@@ -70,10 +70,21 @@
   };
 
   # KDE Plasma Desktop.
-  # services.desktopManager.plasma6.enable = true;
-  # services.xserver.displayManager.sddm.enable = true;
-  # services.xserver.displayManager.sddm.wayland.enable = true;
-  # services.xserver.displayManager.sddm.wayland.compositor = "kwin";
+  # services = {
+  #   desktopManager.plasma6.enable = true;
+  #   xserver = {
+  #     enable = true;
+  #     displayManager = {
+  #       sddm = {
+  #         enable = true;
+  #         wayland = {
+  #           enable = true;
+  #           compositor = "kwin";
+  #         };
+  #       };
+  #     };
+  #   };
+  # };
 
   # Enable DConf and GNOME terminal.
   programs = {
@@ -123,6 +134,10 @@
 
   # v2rayA.
   services.v2raya.enable = true;
+
+  # Nexttrace and Traceroute.
+  programs.nexttrace.enable = true;
+  programs.traceroute.enable = true;
 
   # ZSH.
   programs.zsh = {
