@@ -60,31 +60,31 @@
   };
 
   # GNOME Desktop.
-  services = {
-    xserver = {
-      enable = true;
-      displayManager.gdm.enable = true;
-      desktopManager.gnome.enable = true;
-    };
-    gnome.gnome-settings-daemon.enable = true;
-  };
-
-  # KDE Plasma Desktop.
   # services = {
-  #   desktopManager.plasma6.enable = true;
   #   xserver = {
   #     enable = true;
-  #     displayManager = {
-  #       sddm = {
-  #         enable = true;
-  #         wayland = {
-  #           enable = true;
-  #           compositor = "kwin";
-  #         };
-  #       };
-  #     };
+  #     displayManager.gdm.enable = true;
+  #     desktopManager.gnome.enable = true;
   #   };
+  #   gnome.gnome-settings-daemon.enable = true;
   # };
+
+  # KDE Plasma Desktop.
+  services = {
+    desktopManager.plasma6.enable = true;
+    xserver = {
+      enable = true;
+      displayManager = {
+        sddm = {
+          enable = true;
+          wayland = {
+            enable = true;
+            compositor = "kwin";
+          };
+        };
+      };
+    };
+  };
 
   # Enable DConf and GNOME terminal.
   programs = {
