@@ -10,6 +10,7 @@
     extraGroups = [ "networkmanager" "wheel" "vboxusers" "i2c" ];
     packages = with pkgs; [
       gh
+      flameshot
     ];
   };
   home-manager.users.markson = { pkgs, ... }: {

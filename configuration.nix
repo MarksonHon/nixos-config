@@ -70,20 +70,15 @@
   # };
 
   # KDE Plasma Desktop.
-  services = {
-    desktopManager.plasma6.enable = true;
-    xserver = {
+  services.displayManager = {
+    sddm = {
       enable = true;
-      displayManager = {
-        sddm = {
-          enable = true;
-          wayland = {
-            enable = true;
-            compositor = "kwin";
-          };
-        };
+      wayland = {
+        enable = true;
+        compositor = "kwin";
       };
     };
+    plasma6 = { enable = true; };
   };
 
   # Enable DConf and GNOME terminal.
@@ -119,7 +114,7 @@
   xdg.portal = {
     enable = true;
     xdgOpenUsePortal = true;
-    # extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
   };
 
   # Fcitx5.
@@ -131,6 +126,7 @@
 
   # VirtualBox.
   virtualisation.virtualbox.host.enable = true;
+  virtualisation.virtualbox.host.enableExtensionPack = true;
 
   # v2rayA.
   services.v2raya.enable = true;
