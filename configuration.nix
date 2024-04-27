@@ -78,8 +78,8 @@
         compositor = "kwin";
       };
     };
-    plasma6 = { enable = true; };
   };
+  services.desktopManager = { plasma6 = { enable = true; }; };
 
   # Enable DConf and GNOME terminal.
   programs = {
