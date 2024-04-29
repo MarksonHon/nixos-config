@@ -12,12 +12,11 @@
       gh
       flameshot
       nixfmt
+      htop
+      btop
     ];
   };
   home-manager.users.markson = { pkgs, ... }: {
-    # services.xsettingsd = {
-    #   enable = true;
-    # };
     programs = {
       librewolf = { enable = true; };
       mpv = {
@@ -42,7 +41,9 @@
             [ -d "$flatpak_app/config/fontconfig" ] || mkdir -p "$flatpak_app/config/fontconfig"
             cat /etc/fonts/local.conf > "$flatpak_app/config/fontconfig/fonts.conf"
           done
-          [ -n $(pidof xsettingsd) ] || systemctl --user restart xsettingsd
+          # Set QT_AUTO_SCREEN_SCALE_FACTOR
+          unset QT_AUTO_SCREEN_SCALE_FACTOR
+          export QT_AUTO_SCREEN_SCALE_FACTOR=1
         '';
       };
       zsh = {
