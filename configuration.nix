@@ -3,7 +3,6 @@
 {
   imports = [
     ./hardware-configuration.nix # Include the results of the hardware scan.
-#     ./flatpak-hook.nix # Include the flatpak hook.
     ./fonts.nix # Include the fonts configuration.
     ./users.nix # Include the users configuration.
     <home-manager/nixos>

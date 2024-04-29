@@ -6,13 +6,13 @@
     enableDefaultPackages = true;
     packages = with pkgs; [
       roboto
+      roboto-serif
       noto-fonts
       dejavu_fonts
       noto-fonts-emoji
       source-han-serif
       lxgw-wenkai
       source-han-sans
-      lxgw-neoxihei
       jetbrains-mono
       nerdfonts
       (callPackage ./packages/fonts-harmonyos-sans/default.nix { })
