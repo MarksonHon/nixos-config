@@ -84,7 +84,7 @@
   # Enable DConf and GNOME terminal.
   programs = {
     dconf.enable = true;
-    gnome-terminal.enable = true;
+  #   gnome-terminal.enable = true;
   };
 
   # Configure keymap in X11

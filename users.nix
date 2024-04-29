@@ -15,11 +15,6 @@
   };
   home-manager.users.markson = { pkgs, ... }: {
     programs = {
-      git = {
-        enable = true;
-        userName = "Markson Hon";
-        userEmail = "markson@nixos.local";
-      };
       librewolf = { enable = true; };
       mpv = {
         enable = true;
