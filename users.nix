@@ -11,10 +11,13 @@
     packages = with pkgs; [
       gh
       flameshot
+      nixfmt
     ];
   };
   home-manager.users.markson = { pkgs, ... }: {
-    services.xsettingsd.enable = true;
+    services.xsettingsd = {
+      enable = true;
+    };
     programs = {
       librewolf = { enable = true; };
       mpv = {
@@ -39,6 +42,7 @@
             [ -d "$flatpak_app/config/fontconfig" ] || mkdir -p "$flatpak_app/config/fontconfig"
             cat /etc/fonts/local.conf > "$flatpak_app/config/fontconfig/fonts.conf"
           done
+          [ -n $(pidof xsettingsd) ] || systemctl --user restart xsettingsd
         '';
       };
       zsh = {

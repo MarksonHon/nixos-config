@@ -206,7 +206,10 @@
       # QT_IM_MODULE = "fcitx";
       # QT_QPA_PLATFORMTHEME = "gnome";
     };
-    # sessionVariables = { NIXOS_OZONE_WL = "1"; };
+    sessionVariables = {
+      NIXOS_OZONE_WL = "1";
+      QT_AUTO_SCREEN_SCALE_FACTOR = "1"; 
+    };
   };
 
   # This value determines the NixOS release from which the default
