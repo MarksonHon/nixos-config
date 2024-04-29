@@ -197,6 +197,7 @@
     adwaita-qt
     powershell
     ventoy-full
+    xsettingsd
   ];
 
   # Environments.
@@ -207,7 +208,7 @@
       # QT_QPA_PLATFORMTHEME = "gnome";
     };
     sessionVariables = {
-      NIXOS_OZONE_WL = "1";
+      # NIXOS_OZONE_WL = "1";
       QT_AUTO_SCREEN_SCALE_FACTOR = "1"; 
     };
   };
