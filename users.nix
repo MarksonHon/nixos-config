@@ -14,6 +14,7 @@
     ];
   };
   home-manager.users.markson = { pkgs, ... }: {
+    services.xsettingsd.enable = true;
     programs = {
       librewolf = { enable = true; };
       mpv = {
