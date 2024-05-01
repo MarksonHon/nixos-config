@@ -33,7 +33,7 @@
         };
       };
       yt-dlp = { enable = true; };
-      programs.nheko.enable = true;
+      nheko.enable = true;
       bash = {
         enable = true;
         initExtra = ''
