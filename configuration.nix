@@ -198,6 +198,7 @@
     powershell
     ventoy-full
     xsettingsd
+    vulkan-toolsvulkan-tools
   ];
 
   # Environments.
