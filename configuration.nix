@@ -134,26 +134,6 @@
   programs.nexttrace.enable = true;
   programs.traceroute.enable = true;
 
-  # ZSH.
-  programs.zsh = {
-    enable = true;
-    enableCompletion = true;
-    autosuggestions = {
-      enable = true;
-      strategy = [ "history" ];
-    };
-    promptInit = ''
-      POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
-      source ${pkgs.zsh-syntax-highlighting}/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-      source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
-      if [ -f ~/.p10k.zsh ]; then
-        source ~/.p10k.zsh
-      else
-        p10k configure
-      fi
-    '';
-  };
-
   # Allow unfree packages.
   nixpkgs.config = {
     allowUnfree = true;
