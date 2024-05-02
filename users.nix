@@ -14,6 +14,7 @@
       nixfmt
       htop
       btop
+      epiphany
     ];
   };
   home-manager.users.markson = { pkgs, ... }: {

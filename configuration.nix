@@ -199,6 +199,7 @@
     ventoy-full
     xsettingsd
     vulkan-tools
+    nftables
   ];
 
   # Environments.
