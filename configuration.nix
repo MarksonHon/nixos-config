@@ -83,7 +83,7 @@
   # Enable DConf and GNOME terminal.
   programs = {
     dconf.enable = true;
-  #   gnome-terminal.enable = true;
+    #   gnome-terminal.enable = true;
   };
 
   # Configure keymap in X11
@@ -168,9 +168,7 @@
     file
     bat
     vscode
-    zsh-powerlevel10k
-    zsh-autosuggestions
-    zsh-syntax-highlighting
+    epiphany
     qgnomeplatform-qt6
     qgnomeplatform
     adwaita-qt6
@@ -191,7 +189,7 @@
     };
     sessionVariables = {
       # NIXOS_OZONE_WL = "1";
-      QT_AUTO_SCREEN_SCALE_FACTOR = "1"; 
+      QT_AUTO_SCREEN_SCALE_FACTOR = "1";
     };
   };
 

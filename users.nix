@@ -6,7 +6,7 @@
     isNormalUser = true;
     description = "Markson Hon";
     extraGroups = [ "networkmanager" "wheel" "vboxusers" "i2c" ];
-    packages = with pkgs; [ gh flameshot nixfmt htop btop epiphany ];
+    packages = with pkgs; [ gh flameshot nixfmt htop btop zsh-syntax-highlighting zsh-powerlevel10k ];
   };
   home-manager.users.markson = { pkgs, ... }: {
     programs = {
@@ -49,6 +49,19 @@
           else
             p10k configure
           fi
+          typeset -g -A key
+          key[Home]="\$\{terminfo[khome]\}"
+          key[End]="\$\{terminfo[kend]\}"
+          key[Insert]="\$\{terminfo[kich1]\}"
+          key[Backspace]="\$\{terminfo[kbs]\}"
+          key[Delete]="\$\{terminfo[kdch1]\}"
+          key[Up]="\$\{terminfo[kcuu1]\}"
+          key[Down]="\$\{terminfo[kcud1]\}"
+          key[Left]="\$\{terminfo[kcub1]\}"
+          key[Right]="\$\{terminfo[kcuf1]\}"
+          key[PageUp]="\$\{terminfo[kpp]\}"
+          key[PageDown]="\$\{terminfo[knp]\}"
+          key[Shift-Tab]="\$\{terminfo[kcbt]\}"
         '';
         completionInit = ''
           autoload -Uz compinit
@@ -62,7 +75,6 @@
         };
         autosuggestion = {
           enable = true;
-          highlight = "fg=#ff00ff,bg=cyan,bold,underline";
         };
         syntaxHighlighting = {
           enable = true;
