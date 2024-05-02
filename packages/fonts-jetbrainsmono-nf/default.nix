@@ -10,7 +10,7 @@ stdenv.mkDerivation rec {
   };
   nativeBuildInputs = [ unzip ];
   unpackPhase = ''
-    unzip JetBrainsMono.zip
+    unzip $src
   '';
   installPhase = ''
     mkdir -p $out/share/fonts/fonts-jetbrainsmono-nf
