@@ -14,8 +14,8 @@
       lxgw-wenkai
       source-han-sans
       jetbrains-mono
-      nerdfonts
       (callPackage ./packages/fonts-harmonyos-sans/default.nix { })
+      (callPackage ./packages/fonts-jetbrainsmono-nf/default.nix { })
       (callPackage ./packages/fonts-lxgw-neoxihei/default.nix { })
     ];
     fontconfig = {
