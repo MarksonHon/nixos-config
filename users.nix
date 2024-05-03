@@ -14,7 +14,7 @@
       btop
       zsh-syntax-highlighting
       zsh-powerlevel10k
-      wpsoffice-cn
+      libreoffice-qt-fresh
     ];
   };
   home-manager.users.markson = { pkgs, ... }: {
