@@ -14,6 +14,7 @@
       btop
       zsh-syntax-highlighting
       zsh-powerlevel10k
+      wpsoffice-cn
     ];
   };
   home-manager.users.markson = { pkgs, ... }: {
