@@ -129,7 +129,6 @@
           egrep = "egrep --color=auto";
         };
       };
-      nix-index = { enable = true; };
       chromium = {
         enable = true;
         commandLineArgs = [
