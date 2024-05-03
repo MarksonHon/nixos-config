@@ -176,6 +176,7 @@
     powershell
     ventoy-full
     xsettingsd
+    xorg.xrdb
     vulkan-tools
     nftables
   ];
