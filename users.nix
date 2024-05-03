@@ -6,7 +6,15 @@
     isNormalUser = true;
     description = "Markson Hon";
     extraGroups = [ "networkmanager" "wheel" "vboxusers" "i2c" ];
-    packages = with pkgs; [ gh flameshot nixfmt htop btop zsh-syntax-highlighting zsh-powerlevel10k ];
+    packages = with pkgs; [
+      gh
+      flameshot
+      nixfmt
+      htop
+      btop
+      zsh-syntax-highlighting
+      zsh-powerlevel10k
+    ];
   };
   home-manager.users.markson = { pkgs, ... }: {
     programs = {
@@ -78,7 +86,7 @@
           [[ -n "''${key[PageDown]}"  ]] && bindkey -- "''${key[PageDown]}"   end-of-buffer-or-history
           [[ -n "''${key[Shift-Tab]}" ]] && bindkey -- "''${key[Shift-Tab]}"  reverse-menu-complete
           # Finally, make sure the terminal is in application mode, when zle is
-          # active. Only then are the values from ''$terminfo valid.
+          # active. Only then are the values from $terminfo valid.
           if (( ''${+terminfo[smkx]} && ''${+terminfo[rmkx]} )); then
                   autoload -Uz add-zle-hook-widget
                   function zle_application_mode_start { echoti smkx }
@@ -100,9 +108,7 @@
           searchUpKey = "^[A";
           searchDownKey = "^[B";
         };
-        autosuggestion = {
-          enable = true;
-        };
+        autosuggestion = { enable = true; };
         syntaxHighlighting = {
           enable = true;
           highlighters = [ "main" "brackets" ];
@@ -112,6 +118,7 @@
           };
         };
         shellAliases = {
+          ls = "ls --color=auto";
           ll = "ls -l";
           la = "ls -la";
           df = "df -h";
@@ -121,6 +128,7 @@
           egrep = "egrep --color=auto";
         };
       };
+      nix-index = { enable = true; };
       chromium = {
         enable = true;
         commandLineArgs = [
