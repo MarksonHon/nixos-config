@@ -43,7 +43,7 @@
     networkmanager.enable = true;
   };
 
-  Bluetooth.
+  # Bluetooth.
   hardware.bluetooth = {
     enable = true;
     powerOnBoot = true;
