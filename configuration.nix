@@ -8,18 +8,27 @@
     <home-manager/nixos>
   ];
 
-  # Bootloader.
+  # Kernel and Bootloader
   boot = {
     loader = {
       systemd-boot.enable = true;
       efi.canTouchEfiVariables = true;
     };
-    # initrd.kernelModules = [ "amdgpu" "i2c-dev" ];
-    kernelPackages = pkgs.linuxPackages_zen;
-    # kernelParams = [ "" ];
+    kernelModules = ["i2c-dev" "ddcci_backlight"];
+    extraModulePackages = [config.boot.kernelPackages.ddcci-driver];
+    plymouth.enable = true;
     extraModprobeConfig = ''
       options snd_hda_intel power_save=0
     '';
+  };
+  hardware.i2c.enable = true;
+
+  # Filesystem.
+  fileSystems = {
+    "/".options = [ "compress=zstd" ];
+    "/home".options = [ "compress=zstd" ];
+    "/nix".options = [ "compress=zstd" "noatime" ];
+  #  "/swap".options = [ "noatime" ];
   };
 
   # VAAPI.
@@ -34,11 +43,11 @@
     networkmanager.enable = true;
   };
 
-  # Bluetooth.
-  # hardware.bluetooth = {
-  #   enable = true;
-  #   powerOnBoot = true;
-  # };
+  Bluetooth.
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = true;
+  };
 
   # Set your time zone.
   time.timeZone = "Asia/Shanghai";
@@ -179,6 +188,7 @@
     xorg.xrdb
     vulkan-tools
     nftables
+    kdePackages.powerdevil
   ];
 
   # Environments.
