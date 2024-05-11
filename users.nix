@@ -12,6 +12,7 @@
       nixfmt
       htop
       btop
+      nali
       zsh-syntax-highlighting
       zsh-powerlevel10k
       libreoffice-qt-fresh
