@@ -14,21 +14,22 @@
       systemd-boot.enable = true;
       efi.canTouchEfiVariables = true;
     };
-    kernelModules = ["i2c-dev" "ddcci_backlight"];
-    extraModulePackages = [config.boot.kernelPackages.ddcci-driver];
+    kernelModules = [ "i2c-dev" "ddcci_backlight" ];
+    extraModulePackages = [ config.boot.kernelPackages.ddcci-driver ];
     plymouth.enable = true;
     extraModprobeConfig = ''
       options snd_hda_intel power_save=0
     '';
   };
   services.ddccontrol.enable = true;
+  hardware.i2c = { enable = true; };
 
   # Filesystem.
   fileSystems = {
     "/".options = [ "compress=zstd" ];
     "/home".options = [ "compress=zstd" ];
     "/nix".options = [ "compress=zstd" "noatime" ];
-  #  "/swap".options = [ "noatime" ];
+    #  "/swap".options = [ "noatime" ];
   };
 
   # VAAPI.
