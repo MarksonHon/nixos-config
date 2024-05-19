@@ -21,7 +21,7 @@
       options snd_hda_intel power_save=0
     '';
   };
-  hardware.i2c.enable = true;
+  services.ddccontrol.enable = true;
 
   # Filesystem.
   fileSystems = {
