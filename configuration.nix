@@ -14,8 +14,7 @@
       systemd-boot.enable = true;
       efi.canTouchEfiVariables = true;
     };
-    kernelModules = [ "i2c-dev" ];
-    kernelParams = [ "transparent_hugepage=never" ];
+    kernelModules = [ "i2c-dev" "ddcci_backlight" ];
     extraModulePackages = [ config.boot.kernelPackages.ddcci-driver ];
     plymouth.enable = true;
     extraModprobeConfig = ''
@@ -135,11 +134,8 @@
   };
 
   # VirtualBox.
-  # virtualisation.virtualbox.host.enable = true;
-  # virtualisation.virtualbox.host.enableExtensionPack = true;
-
-  # VMware Workstation.
-  virtualisation.vmware.host.enable = true;
+  virtualisation.virtualbox.host.enable = true;
+  virtualisation.virtualbox.host.enableExtensionPack = true;
 
   # v2rayA.
   services.v2raya.enable = true;
