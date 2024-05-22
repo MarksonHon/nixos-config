@@ -137,6 +137,14 @@
   virtualisation.virtualbox.host.enable = true;
   virtualisation.virtualbox.host.enableExtensionPack = true;
 
+  # Podman.
+  virtualisation.podman = {
+    enable = true;
+    dockerCompat = true;
+    defaultNetwork.settings.dns_enabled = true;
+  };
+  virtualisation.containers.enable = true;
+
   # v2rayA.
   services.v2raya.enable = true;
 
@@ -190,6 +198,7 @@
     vulkan-tools
     nftables
     kdePackages.powerdevil
+    podman-tui
   ];
 
   # Environments.
