@@ -199,6 +199,10 @@
     nftables
     kdePackages.powerdevil
     podman-tui
+    glxinfo
+    eglinfo
+    clinfo
+    wayland-info
   ];
 
   # Environments.
