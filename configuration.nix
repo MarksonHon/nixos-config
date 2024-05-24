@@ -201,7 +201,7 @@
     podman-tui
     glxinfo
     clinfo
-    wayland-info
+    wayland-utils
   ];
 
   # Environments.
