@@ -14,9 +14,10 @@
       systemd-boot.enable = true;
       efi.canTouchEfiVariables = true;
     };
+    kernelPackages = pkgs.linuxPackages_zen;
     kernelModules = [ "i2c-dev" "ddcci_backlight" ];
-    extraModulePackages = [ config.boot.kernelPackages.ddcci-driver ];
-    plymouth.enable = true;
+    # extraModulePackages = [ config.boot.kernelPackages.ddcci-driver ];
+    # plymouth.enable = true;
     extraModprobeConfig = ''
       options snd_hda_intel power_save=0
     '';
