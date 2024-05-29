@@ -5,7 +5,7 @@
   users.users.markson = {
     isNormalUser = true;
     description = "Markson Hon";
-    extraGroups = [ "networkmanager" "wheel" "vboxusers" "i2c" ];
+    extraGroups = [ "networkmanager" "wheel" "libvirtd" "i2c" ];
     packages = with pkgs; [
       gh
       flameshot

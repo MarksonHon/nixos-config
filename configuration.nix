@@ -134,9 +134,9 @@
     fcitx5.waylandFrontend = true;
   };
 
-  # VirtualBox.
-  virtualisation.virtualbox.host.enable = true;
-  virtualisation.virtualbox.host.enableExtensionPack = true;
+  # KVM Virt Manager.
+  virtualisation.libvirtd.enable = true;
+  programs.virt-manager.enable = true;
 
   # Podman.
   virtualisation.podman = {
