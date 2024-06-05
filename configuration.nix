@@ -22,10 +22,10 @@
       options snd_hda_intel power_save=0
     '';
   };
-  services.ddccontrol.enable = true;
+  # services.ddccontrol.enable = true;
   hardware.i2c = { enable = true; };
 
-  # Filesystem.
+  # Filesystems.
   fileSystems = {
     "/".options = [ "compress=zstd" ];
     "/home".options = [ "compress=zstd" ];
@@ -171,8 +171,6 @@
     gst_all_1.gst-plugins-ugly
     gst_all_1.gst-plugins-good
     curl
-    yaru-theme
-    gnome.gnome-tweaks
     intel-media-driver
     firefox
     fastfetch
@@ -188,10 +186,6 @@
     bat
     vscode
     epiphany
-    qgnomeplatform-qt6
-    qgnomeplatform
-    adwaita-qt6
-    adwaita-qt
     powershell
     ventoy-full
     xsettingsd
@@ -209,11 +203,12 @@
   environment = {
     variables = {
       QT_AUTO_SCREEN_SCALE_FACTOR = "1";
+      XMODIFIERS = "@im=fcitx";
       # QT_IM_MODULE = "fcitx";
       # QT_QPA_PLATFORMTHEME = "gnome";
     };
     sessionVariables = {
-      # NIXOS_OZONE_WL = "1";
+      NIXOS_OZONE_WL = "1";
       QT_AUTO_SCREEN_SCALE_FACTOR = "1";
     };
   };
