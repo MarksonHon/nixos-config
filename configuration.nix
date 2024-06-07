@@ -139,7 +139,7 @@
   programs.virt-manager.enable = true;
 
   # VirtualBox.
-  virtualisation.virtualbox.host.enable = true;
+  # virtualisation.virtualbox.host.enable = true;
 
   # Podman.
   virtualisation.podman = {
