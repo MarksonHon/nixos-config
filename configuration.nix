@@ -15,6 +15,7 @@
       efi.canTouchEfiVariables = true;
     };
     kernelPackages = pkgs.linuxPackages_zen;
+    kernelParams = [ "transparent_hugepage=never" ];
     kernelModules = [ "i2c-dev" "ddcci_backlight" ];
     # extraModulePackages = [ config.boot.kernelPackages.ddcci-driver ];
     # plymouth.enable = true;
@@ -140,6 +141,9 @@
 
   # VirtualBox.
   # virtualisation.virtualbox.host.enable = true;
+
+  # VMware Workstation.
+  virtualisation.vmware.host.enable = true;
 
   # Podman.
   virtualisation.podman = {
