@@ -14,7 +14,7 @@
       systemd-boot.enable = true;
       efi.canTouchEfiVariables = true;
     };
-    kernelPackages = pkgs.linuxPackages_latest;
+    kernelPackages = pkgs.linuxPackages;
     kernelParams = [ "transparent_hugepage=never" ];
     kernelModules = [ "i2c-dev" "ddcci_backlight" ];
     # extraModulePackages = [ config.boot.kernelPackages.ddcci-driver ];
