@@ -3,11 +3,11 @@
 stdenv.mkDerivation rec {
     name = "lxgw-neoxihei-fonts-${version}";
     pname = "lxgw-neoxihei-fonts";
-    version = "v1.120.2";
+    version = "v1.123.2";
 
     src = fetchurl {
-        url = "https://github.com/lxgw/LxgwNeoXiHei/releases/download/v1.120.2/LXGWNeoXiHei.ttf";
-        sha256 = "44dd0e98d4b769244c2b5f67362a97609e0f200421eaee56ffe2fc0c27aa31c1";
+        url = "https://github.com/lxgw/LxgwNeoXiHei/releases/download/v1.123.2/LXGWNeoXiHei.ttf";
+        sha256 = "b285453dea14e11a2f938c695ddf740a3cd0d72d6bc75393ff878a0993537784";
     };
     unpackPhase = ''
         cat $src > LXGWNeoXiHei.ttf

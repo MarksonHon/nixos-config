@@ -138,6 +138,9 @@
   virtualisation.libvirtd.enable = true;
   programs.virt-manager.enable = true;
 
+  # VirtualBox.
+  virtualisation.virtualbox.enable = true;
+
   # Podman.
   virtualisation.podman = {
     enable = true;
