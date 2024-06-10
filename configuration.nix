@@ -186,6 +186,7 @@
     unzip
     unrar
     ddcutil
+    brightnessctl
     libva-utils
     git
     mission-center
