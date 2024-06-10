@@ -17,13 +17,11 @@
     kernelPackages = pkgs.linuxPackages;
     kernelParams = [ "transparent_hugepage=never" ];
     kernelModules = [ "i2c-dev" "ddcci_backlight" ];
-    # extraModulePackages = [ config.boot.kernelPackages.ddcci-driver ];
-    # plymouth.enable = true;
+    extraModulePackages = [ config.boot.kernelPackages.ddcci-driver ];
     extraModprobeConfig = ''
       options snd_hda_intel power_save=0
     '';
   };
-  # services.ddccontrol.enable = true;
   hardware.i2c = { enable = true; };
 
   # Filesystems.
@@ -33,7 +31,10 @@
     "/nix".options = [ "compress=zstd" "noatime" ];
     #  "/swap".options = [ "noatime" ];
   };
-
+  
+  # zramSwap.
+  zramSwap.enable = true;
+  
   # VAAPI.
   hardware.opengl = {
     enable = true;
