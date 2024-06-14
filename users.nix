@@ -23,6 +23,7 @@
       librewolf = { enable = true; };
       mpv = {
         enable = true;
+        package = pkgs.mpv-unwrapped;
         scripts = [ pkgs.mpvScripts.uosc ];
         config = {
           vo = "gpu-next";
