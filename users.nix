@@ -23,7 +23,7 @@
       librewolf = { enable = true; };
       mpv = {
         enable = true;
-        scripts = [ pkgs.mpvScripts.uosc ];
+        # scripts = [ pkgs.mpvScripts.uosc ];
         config = {
           vo = "gpu-next";
           hwdec = "auto-safe";
