@@ -16,6 +16,7 @@
       zsh-syntax-highlighting
       zsh-powerlevel10k
       libreoffice-qt-fresh
+      yaml-language-server
     ];
   };
   home-manager.users.markson = { pkgs, ... }: {
