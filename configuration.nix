@@ -15,7 +15,7 @@
       efi.canTouchEfiVariables = true;
     };
     kernelPackages = pkgs.linuxPackages_latest;
-    # kernelParams = [ "transparent_hugepage=never" ];
+    kernelParams = [ "transparent_hugepage=never" ];
     kernelModules = [ "i2c-dev" "ddcci_backlight" ];
     extraModulePackages = [ config.boot.kernelPackages.ddcci-driver ];
     extraModprobeConfig = ''
@@ -141,7 +141,10 @@
   programs.virt-manager.enable = true;
 
   # VirtualBox.
-  virtualisation.virtualbox.host.enable = true;
+  # virtualisation.virtualbox.host.enable = true;
+
+  # VMWare.
+  virtualisation.vmware.host.enable = true;
 
   # Podman.
   virtualisation.podman = {
