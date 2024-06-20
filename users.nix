@@ -17,6 +17,7 @@
       zsh-powerlevel10k
       libreoffice-qt-fresh
       yaml-language-server
+      kcalc
     ];
   };
   home-manager.users.markson = { pkgs, ... }: {
