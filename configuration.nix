@@ -206,6 +206,7 @@
     clinfo
     wayland-utils
     dae
+    bridge-utils
   ];
 
   # Environments.
