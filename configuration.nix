@@ -144,7 +144,7 @@
   # virtualisation.virtualbox.host.enable = true;
 
   # VMWare.
-  virtualisation.vmware.host.enable = true;
+  # virtualisation.vmware.host.enable = true;
 
   # Podman.
   virtualisation.podman = {
